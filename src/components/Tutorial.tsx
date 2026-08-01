@@ -119,7 +119,7 @@ export default function Tutorial({ onClose }: TutorialProps) {
           ×
         </button>
         <p className="tutorial-step-count">
-          Step {stepIndex + 1} of {STEPS.length}
+          {isFirst ? "Welcome" : `Step ${stepIndex} of ${STEPS.length - 1}`}
         </p>
         <h2 id="tutorial-title">{step.title}</h2>
         {step.body.map((paragraph, i) => (
